@@ -628,7 +628,7 @@ client.on("message", message => {
 
 <a:emoji_75:828615179704729621> | **Emotions Commands**
 
-> kiss - hug - kill - slap - cat - dog - punch - love - dance
+> kiss - hug - kill - slap - love
 
 <a:emoji_62:826691316024868904> | **Funny Commands**
 
@@ -690,7 +690,232 @@ client.on('message', CAROL => {
         return CAROL.channel.send(` ${lvl}% |  Gay :rainbow_flag:   `)
     }
 });
+    
+client.on("message", message => {
+  if (message.content.startsWith(prefix + "meme", "Meme")) {
+    let meme = [
+      "https://cdn.discordapp.com/attachments/750309650439602196/757981917625975015/image0.jpg",
+      "https://cdn.discordapp.com/attachments/750309650439602196/760521279060050001/image0.png",
+      "https://cdn.discordapp.com/attachments/750309650439602196/760521288409415720/image0.png",
+      "https://cdn.discordapp.com/attachments/750309650439602196/760521294852259880/image0.png",
+      "https://cdn.discordapp.com/attachments/750309650439602196/760521299738230814/image0.png",
+      "https://cdn.discordapp.com/attachments/750309650439602196/761487449104449536/image0.png",
+      "https://cdn.discordapp.com/attachments/680928395399266314/828650571295752272/mymeme_2.png",
+      "https://cdn.discordapp.com/attachments/680928395399266314/828650494968201246/You.jpg",
+      "https://cdn.discordapp.com/attachments/680928395399266314/828650236083044402/FB_IMG_1612523388938.jpg",
+      "https://cdn.discordapp.com/attachments/680928395399266314/828650064037675068/wholesomenkinkylove_20210307_CJC1.jpg",
+      "https://i.redd.it/ox3vqpltmyq61.png",
+      "https://i.redd.it/2flqz4dlaqq61.jpg",
+      "https://i.redd.it/5ndz7tectrq61.jpg",
+      "https://i.redd.it/3okeboqnjiq61.jpg",
+      "https://i.redd.it/s4q0crz7ccq61.jpg",
+      "https://i.redd.it/o1wmvagwaeq61.jpg",
+      "https://i.redd.it/k0fcfxalntp61.jpg",
+      "https://i.redd.it/sbcfikwq1qp61.jpg",
+    ];
+    message.channel
+      .send({
+        embed: {
+          description: `**${message.author.username} **MEME GIFS AND PHOTOS** `,
+          image: {
+            url: meme[Math.floor(Math.random() * meme.length)]
+          }
+        }
+      })
+      .catch(e => {
+        client.log.error(e);
+      });
+  }
+});
 
+client.on("message", message => {
+  if (message.content.startsWith(prefix + "boom", "Boom")) {
+    let bom = [
+      "https://media.giphy.com/media/Xp98Vi5OBvhXpwA0Zp/giphy.gif",
+      "https://media.giphy.com/media/POnwee2RZBWmWWCeiX/giphy.gif",
+      "https://media.giphy.com/media/oywQ7OhnYupINQa0L4/giphy.gif",
+      "https://media.giphy.com/media/5aLrlDiJPMPFS/giphy.gif",
+      "https://media.giphy.com/media/l1BgS9aNtdCdjgkaQ/giphy.gif",
+      "https://media.giphy.com/media/d0NnEG1WnnXqg/giphy.gif",
+      "https://media.giphy.com/media/NmrqUdwGXPOog/giphy.gif",
+      "https://media.giphy.com/media/dpnfPvaCIHBrW/giphy.gif",
+      "https://media.giphy.com/media/mks5DcSGjhQ1a/giphy.gif",
+      "https://media.giphy.com/media/8wfoaIjVc0FBaLu5xH/giphy.gif",
+      "https://media.giphy.com/media/xThtanBNixj1O1m5oY/giphy.gif",
+      "https://media.giphy.com/media/fdGkCOiM0oOqI/giphy.gif",
+      "https://media.giphy.com/media/c862b2dAhJXYA/giphy.gif",
+      "https://media.giphy.com/media/CepTYjGRbV1ba/giphy.gif",
+      "https://media.giphy.com/media/sRGCQ7INgSD0qbTqB5/giphy.gif",
+      "https://media.giphy.com/media/ZJYOwl8SbFsic/giphy.gif",
+      "https://media.giphy.com/media/3oEhmKspQX9EN48HNm/giphy.gif",
+      "https://media.giphy.com/media/l1KVcAP6jvP9r4MaA/giphy.gif",
+      "https://media.giphy.com/media/j2mY6orBJqAdG/giphy.gif",
+      "https://media.giphy.com/media/3oz8xEqn8AGAQbR0yY/giphy.gif",
+      "https://media.giphy.com/media/l4lQW9KfRQscU0ds4/giphy.gif",
+      "https://media.giphy.com/media/XathaB5ILqSME/giphy.gif",
+      "https://media.giphy.com/media/26AHvF2p5pridaSf6/giphy.gif",
+      "https://media.giphy.com/media/Nlur5uO8GkjC0/giphy.gif",
+      "https://media.giphy.com/media/l1J3preURPiwjRPvG/giphy.gif",
+      "https://media.giphy.com/media/8cdZit2ZcjTri/giphy.gif",
+      "https://media.giphy.com/media/3o7btNa0RUYa5E7iiQ/giphy.gif",
+      "https://media.giphy.com/media/V88pTEefkoOFG/giphy.gif",
+      "https://media.giphy.com/media/rfWAomOTPeOo8/giphy.gif"
+    ];
+
+    message.channel
+      .send({
+        embed: {
+          description: `${message.author.username} **BOOM** `,
+          image: {
+            url: bom[Math.floor(Math.random() * bom.length)]
+          }
+        }
+      })
+      .catch(e => {
+        client.log.error(e);
+      });
+  }
+});
+    
+client.on("message", message => {
+  if (message.content.startsWith(prefix + "kiss", "Kiss")) {
+    let kiss = [
+      "https://tenor.com/view/kiss-love-gif-19168972",
+      "https://cdn.nekos.life/kiss/kiss_053.gif",
+      "https://cdn.nekos.life/kiss/kiss_081.gif",
+      "https://cdn.nekos.life/kiss/kiss_035.gif",
+      "https://cdn.nekos.life/kiss/kiss_032.gif",
+      "https://cdn.nekos.life/kiss/kiss_036.gif",
+      "https://cdn.nekos.life/kiss/kiss_037.gif",
+      "https://cdn.nekos.life/kiss/kiss_038.gif",
+      "https://cdn.nekos.life/kiss/kiss_039.gif",
+      "https://cdn.nekos.life/kiss/kiss_040.gif",
+      "https://cdn.nekos.life/kiss/kiss_041.gif",
+      "https://cdn.nekos.life/kiss/kiss_042.gif",
+      "https://cdn.nekos.life/kiss/kiss_044.gif",
+      "https://cdn.nekos.life/kiss/kiss_043.gif",
+      "https://cdn.nekos.life/kiss/kiss_045.gif",
+      "https://cdn.nekos.life/kiss/kiss_046.gif",
+      "https://cdn.nekos.life/kiss/kiss_047.gif",
+      "https://cdn.nekos.life/kiss/kiss_048.gif",
+      "https://cdn.nekos.life/kiss/kiss_049.gif",
+      "https://cdn.nekos.life/kiss/kiss_050.gif",
+      "https://cdn.nekos.life/kiss/kiss_051.gif",
+      "https://cdn.nekos.life/kiss/kiss_052.gif",
+      "https://cdn.nekos.life/kiss/kiss_053.gif",
+      "https://cdn.nekos.life/kiss/kiss_054.gif"
+    ];
+    message.channel
+      .send({
+        embed: {
+          description: `**${message.author.username} **KISS** `,
+          image: {
+            url: kiss[Math.floor(Math.random() * kiss.length)]
+          }
+        }
+      })
+      .catch(e => {
+        client.log.error(e);
+      });
+  }
+});
+
+client.on("message", message => {
+  if (message.content.startsWith(prefix + "hug", "Hug")) {
+    let hug = [
+      "https://cdn.nekos.life/hug/hug_007.gif",
+      "https://cdn.nekos.life/hug/hug_031.gif",
+      "https://cdn.nekos.life/hug/hug_032.gif",
+      "https://cdn.nekos.life/hug/hug_033.gif",
+      "https://cdn.nekos.life/hug/hug_034.gif",
+      "https://cdn.nekos.life/hug/hug_035.gif",
+      "https://cdn.nekos.life/hug/hug_036.gif",
+      "https://cdn.nekos.life/hug/hug_037.gif",
+      "https://cdn.nekos.life/hug/hug_038.gif",
+      "https://cdn.nekos.life/hug/hug_039.gif",
+      "https://cdn.nekos.life/hug/hug_040.gif",
+      "https://cdn.nekos.life/hug/hug_041.gif",
+      "https://cdn.nekos.life/hug/hug_042.gif",
+      "https://cdn.nekos.life/hug/hug_043.gif",
+      "https://cdn.nekos.life/hug/hug_044.gif",
+      "https://cdn.nekos.life/hug/hug_045.gif",
+      "https://cdn.nekos.life/hug/hug_046.gif",
+      "https://cdn.nekos.life/hug/hug_047.gif",
+      "https://cdn.nekos.life/hug/hug_048.gif",
+      "https://cdn.nekos.life/hug/hug_049.gif",
+      "https://cdn.nekos.life/hug/hug_050.gif",
+      "https://cdn.nekos.life/hug/hug_051.gif",
+      "https://cdn.nekos.life/hug/hug_052.gif",
+      "https://cdn.nekos.life/hug/hug_053.gif"
+    ];
+    message.channel
+      .send({
+        embed: {
+          description: `**${message.author.username} **HUGS** `,
+          image: {
+            url: hug[Math.floor(Math.random() * hug.length)]
+          }
+        }
+      })
+      .catch(e => {
+        client.log.error(e);
+      });
+  }
+});
+
+client.on("message", message => {
+  if (message.content.startsWith(prefix + "slap")) {
+    let slap = [
+      "https://cdn.nekos.life/slap/slap_014.gif",
+      "https://cdn.nekos.life/slap/slap_013.gif",
+      "https://cdn.nekos.life/slap/slap_015.gif",
+      "https://cdn.nekos.life/slap/slap_016.gif",
+      "https://cdn.nekos.life/slap/slap_017.gif",
+      "https://cdn.nekos.life/slap/slap_018.gif",
+      "https://cdn.nekos.life/slap/slap_020.gif",
+      "https://cdn.nekos.life/slap/slap_021.gif",
+      "https://cdn.nekos.life/slap/slap_022.gif",
+      "https://cdn.nekos.life/slap/slap_023.gif",
+    ];
+    message.channel
+      .send({
+        embed: {
+          description: `**${message.author.username} **SLAP** `,
+          image: {
+            url: slap[Math.floor(Math.random() * slap.length)]
+          }
+        }
+      })
+      .catch(e => {
+        client.log.error(e);
+      });
+  }
+});
+
+client.on("message", message => {
+  if (message.content.startsWith(prefix + "love")) {
+    let love = [
+      "https://cdn.discordapp.com/attachments/809745497223856159/810433340276211732/12b086764cabba75a58572a76790e00a.gif",
+      "https://cdn.discordapp.com/attachments/804197037671186434/811686417277255720/Sy6Ai6ODb.gif",
+      "https://cdn.discordapp.com/attachments/730875200958103623/803022903498113044/image0.gif",
+      "https://cdn.discordapp.com/attachments/730875200958103623/803022886503579678/image0.gif",
+      "https://cdn.discordapp.com/attachments/730875200958103623/803028515595354212/image0.gif",
+      "https://cdn.discordapp.com/attachments/730875200958103623/803028508799795200/image0.gif",
+    ];
+    message.channel
+      .send({
+        embed: {
+          description: `**${message.author.username} **LOVE** `,
+          image: {
+            url: love[Math.floor(Math.random() * love.length)]
+          }
+        }
+      })
+      .catch(e => {
+        client.log.error(e);
+      });
+  }
+});
 // Events
 
 client.login("");
