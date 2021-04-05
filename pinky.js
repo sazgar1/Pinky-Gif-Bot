@@ -536,3 +536,201 @@ client.on("message", message => {
       });
   }
 });
+
+client.on("message", async message => {
+  if (message.content.toLowerCase() === prefix + "Profile", "profile", "p", "P"") {
+    message.channel.startTyping();
+    setTimeout(() => {
+      message.channel.stopTyping();
+    }, Math.random() * (1 - 3) + 1 * 200).then(
+      message.channel.send({
+        files: [
+          {
+            name: "prfoilebycutie.png",
+            attachment: `https://api.probot.io/profile/${message.author.id}`
+          }
+        ]
+      })
+    );
+  }
+});
+    
+client.on("message", async msg => {
+  if (msg.content === prefix + "server", "Server") {
+    var w1 = msg.guild.createdAt.getFullYear();
+    var w2 = msg.guild.createdAt.getMonth();
+    var w3 = msg.guild.createdAt.getDate();
+    let embed = new Discord.RichEmbed()
+      .addField("**   | NAME SERVER**: ", msg.guild.name)
+      .addField("**   | ID SERVER**:", msg.guild.id)
+      .addField("**   | OWNER SHIP **: ", msg.guild.owner)
+      .addField("**   | MEMBER COUNT**: ", msg.guild.memberCount)
+      .addField("**   | REGION SERVER**: ", msg.guild.region)
+      .addField("**   | CHANNEL COUNTS**: ", msg.guild.channels.size)
+      .addField("**   | ROLES COUNTS**: ", msg.guild.roles.size)
+      .setColor("RANDOM")
+      .setImage(
+        ""
+      )
+      .setFooter(`${msg.guild.name}`);
+    msg.channel.sendEmbed(embed);
+  }
+});
+    
+client.on("message", message => {
+  let command = message.content.split(" ")[0];
+  if (command == prefix + "bot", "Bot") {
+    const bot = new Discord.RichEmbed()
+      .setAuthor(client.user.username, client.user.avatarURL)
+      .setColor("RANDOM")
+      .addField(
+        " |**PING BOT** : ",
+        `» ${Date.now() - message.createdTimestamp}` + " ms",
+        true
+      )
+      .addField(
+        " |**SERVERS** :  ",
+        `» ${client.guilds.size}`,
+        true
+      )
+      .addField(
+        " |**CHANNELS** : ",
+        `» ${client.channels.size} `,
+        true
+      )
+      .addField(
+        " |**BOT NAME** :  ",
+        `» ${client.user.tag} `,
+        true
+      )
+      .addField(
+        " |**OWNER BOT** :  ",
+        `» <@790232202134421554>`,
+        true
+      ) //  Pinky Is One
+      .setImage(
+        ""
+      )
+      .setFooter(message.author.username, message.author.avatarURL);
+    message.channel.send(bot);
+  }
+});
+    
+client.on('message', black => {
+  if (black.content.startsWith(prefix + "status", "Status")) {
+  black.channel.send({
+  embed: new Discord.RichEmbed()
+  
+     .setColor('RANDOM')
+     .addField('``__Guilds__``', [client.guilds.size], true)
+     .setFooter(message.author.username, message.author.avatarURL)       
+  })
+  }
+  });
+    
+client.on("message", async message => {
+    if(message.content.startsWith(prefix + "invite", "inv", "Invite")) {
+        let invite = new Discord.RichEmbed()
+            .setColor("RANDOM")
+            .setAuthor(message.author.username, message.author.displayAvatarURL)
+            .setThumbnail(message.author.avatarURL)
+            .setImage(
+        ""
+      )
+            .setTitle(" :link: | **Link Bot**")
+            .setURL(``);///link bot
+            message.channel.sendEmbed(invite);
+ 
+  }
+});
+    
+client.on("message", message => {
+  if (message.content === prefix + "help", "Help", "HELP", "h", "H") {
+    var addserver = ``;
+    var SUPPORT = ``;
+    var website = ``;
+    let embed = new Discord.RichEmbed()
+      .setAuthor(message.author.username)
+      .setThumbnail(message.author.avatarURL)
+      .setFooter("")
+      .setImage(
+        ""
+      )
+      .setColor("RANDOM").setDescription(` 
+    
+<a:kitty:822641640933556234> | **Info Commands**
+
+> profile - bot - status - server - invite
+
+<a:kitty:828251571787006043> | **Gifs Commands**
+
+> boy - girl - couple - anime - animal - emoji - neon - baby - sad - smoking - aesthetic - black and white
+
+<a:emoji_75:828615179704729621> | **Emotions Commands**
+
+> kiss - hug - kill - slap - cat - dog - punch - love - dance
+
+<a:emoji_62:826691316024868904> | **Funny Commands**
+
+> iq - ship - gay - smip - meme - boom
+
+<a:kitty:827215400257323038> | **Links**
+
+[ Support Server]() 
+[ Link Bot]() 
+`);
+    
+client.on("message", message => {
+  if (message.content.startsWith(prefix + "avatar", "Avatar",)) {
+    if (!message.channel.guild) return;
+    var mentionned = message.mentions.users.first();
+    var client;
+    if (mentionned) {
+      var client = mentionned;
+    } else {
+      var client = message.author;
+    }
+    const embed = new Discord.RichEmbed()
+      .addField("Requested by:", "<@" + message.author.id + ">")
+      .setColor("RANDOM")
+      .setImage(`${client.avatarURL}`)
+      .setFooter(message.author.username);
+    message.channel.sendEmbed(embed);
+  }
+});
+
+client.on('message', CAROL => {
+    if(CAROL.content.startsWith(prefix + "ship", "Ship")) {
+        const lvl = Math.floor(Math.random() * 100) + 1 ;
+        const owner = CAROL.author ;
+        return CAROL.channel.send(` ${lvl}% | Ship :revolving_hearts: `)
+    }
+});
+    
+client.on('message', CAROL => {
+    if(CAROL.content.startsWith(prefix + "iq", "Iq", "IQ")) {
+        const lvl = Math.floor(Math.random() * 100) + 1 ;
+        const owner = CAROL.author ;
+        return CAROL.channel.send(` ${lvl}% |  IQ :brain:  `)
+    }
+});
+
+client.on('message', CAROL => {
+    if(CAROL.content.startsWith(prefix + "simp", "Simp")) {
+        const lvl = Math.floor(Math.random() * 100) + 1 ;
+        const owner = CAROL.author ;
+        return CAROL.channel.send(` ${lvl}% |  Simp  `)
+    }
+});
+    
+client.on('message', CAROL => {
+    if(CAROL.content.startsWith(prefix + "Gay", "gay")) {
+        const lvl = Math.floor(Math.random() * 100) + 1 ;
+        const owner = CAROL.author ;
+        return CAROL.channel.send(` ${lvl}% |  Gay :rainbow_flag:   `)
+    }
+});
+
+// Events
+
+client.login("");
